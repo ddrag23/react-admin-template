@@ -1,4 +1,4 @@
-import { FaGauge } from "react-icons/fa6";
+import { FaGauge, FaWarehouse } from "react-icons/fa6";
 
 export const MENU_SIDEBAR = [
     {
@@ -7,7 +7,7 @@ export const MENU_SIDEBAR = [
         title: 'Dashboard'
     },
     {
-        icon: <FaGauge />,
+        icon: <FaWarehouse />,
         title: 'Inventory',
         path: 'inventory',
         hasChildren: true,

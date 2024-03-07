@@ -1,6 +1,9 @@
 import useScroll from "@/hooks/useScroll";
 import { cn } from "@/lib/utils";
 import { Link } from "react-router-dom";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
+import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import { DROPDOWN_NAVBAR } from "@/constant/dropdown-navbar";
 
 export default function Header() {
     const scrolled = useScroll(5);
@@ -20,9 +23,19 @@ export default function Header() {
                 </div>
 
                 <div className="hidden md:block">
-                    <div className="h-8 w-8 rounded-full bg-zinc-300 flex items-center justify-center text-center">
-                        <span className="font-semibold text-sm">HQ</span>
-                    </div>
+                    <DropdownMenu>
+                        <DropdownMenuTrigger>
+                            <Avatar>
+                                <AvatarImage src="https://github.com/shadcn.png" />
+                                <AvatarFallback>CN</AvatarFallback>
+                            </Avatar>
+                        </DropdownMenuTrigger>
+                        <DropdownMenuContent>
+                            <DropdownMenuLabel>My Account</DropdownMenuLabel>
+                            <DropdownMenuSeparator />
+                            {DROPDOWN_NAVBAR.map((item, key) => <DropdownMenuItem key={key}><Link to={item.route}>{item.title}</Link></DropdownMenuItem>)}
+                        </DropdownMenuContent>
+                    </DropdownMenu>
                 </div>
             </div>
         </div>
