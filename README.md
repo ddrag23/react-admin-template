@@ -30,4 +30,4 @@ export default {
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
 ## Notes
-- This template design and code i didn't make it. I just transform from nextjs to reactjs because I have needs react only. my reference in this account [tutorial sidebar nextjs](https://github.com/hqasmei/youtube-tutorials/tree/main/side-nav-with-submenus) 
+- This template design and code i didn't make it. I only change from nextjs to reactjs and change some code according to needs and compatibility with react vite.  my reference in this account [tutorial sidebar nextjs](https://github.com/hqasmei/youtube-tutorials/tree/main/side-nav-with-submenus) 
